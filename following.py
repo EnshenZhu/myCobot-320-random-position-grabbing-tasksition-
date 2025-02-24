@@ -15,16 +15,16 @@ Vision-based Follow, Pick & Place Demo
 import cv2
 import numpy as np
 import time
-import json
+import yaml
 from pymycobot import MyCobot320Socket
 
 
 def get_ip_config():
-    # Open and read the JSON file
-    with open('env/ipconfig.json', 'r') as file:
-        data = json.load(file)
+    # YAML info config
+    with open('env/configs.yaml', 'r') as file:
+        data = yaml.safe_load(file)
 
-    # read the ip and port info
+    # 读取 IP 和端口信息
     ip_address = data['ip']
     netport = data['port']
 

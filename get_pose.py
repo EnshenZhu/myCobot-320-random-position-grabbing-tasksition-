@@ -12,16 +12,16 @@ Demo of 'release -> manual drag -> focus -> read pose' for MyCobot 320 via Socke
 """
 
 import time
-import json
+import yaml
 from pymycobot import MyCobot320Socket
 
 
-def getIpConfig():
-    # Open and read the JSON file
-    with open('env/ipconfig.json', 'r') as file:
-        data = json.load(file)
+def get_ip_config():
+    # YAML info config
+    with open('env/configs.yaml', 'r') as file:
+        data = yaml.safe_load(file)
 
-    # read the ip and port info
+    # 读取 IP 和端口信息
     ip_address = data['ip']
     netport = data['port']
 
@@ -33,7 +33,7 @@ def main():
     # 0) Get the IP and port information
     # ---------------------------------------------------
 
-    ip_address, netport = getIpConfig()
+    ip_address, netport = get_ip_config()
 
     # ---------------------------------------------------
     # 1) Build WiFi Connection

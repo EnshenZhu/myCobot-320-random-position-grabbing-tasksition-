@@ -1,11 +1,10 @@
 import time
-import json
 import yaml
 from pymycobot import MyCobot320Socket
 
 
 def get_ip_config():
-    # 读取 YAML 文件
+    # YAML info config
     with open('env/configs.yaml', 'r') as file:
         data = yaml.safe_load(file)
 
