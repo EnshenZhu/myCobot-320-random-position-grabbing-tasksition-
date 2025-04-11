@@ -1,0 +1,1 @@
+smimport('mycobot_320_m5_2022.urdf')
