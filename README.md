@@ -1,6 +1,6 @@
 # myCobot-320-random-position-grabbing-task-YOLOv5s
 
-A demo video: 
+Demo video: https://www.youtube.com/watch?v=ElcOFTFr0Zg&ab_channel=dalong
 
 Using myCobot-320 to grab an object in the area of camera detection
 
@@ -15,6 +15,12 @@ matrix.py is for calculating the Homography Transform
 robot control.ipynb is for letting the robot grab the object with random position
 
 robot_control_with_Qwen.ipynb is for letting the robot grab objects and move to a random position by your instruction.
+
+jog_follow_new.py is upadated using fresh mode, which will make the process more efficient.
+
+Voice.py is voice based control
+
+test.py is for quickly test your prompt
 
 ## Before the Start:
 ### Set up the Wi-Fi Hotspot
